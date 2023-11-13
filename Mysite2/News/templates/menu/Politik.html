@@ -1,0 +1,212 @@
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>
+                        {% block title %}{% endblock %}
+                    </title>
+                    {% block htmlhead %}
+                    {% load static %}
+                    <link rel="stylesheet" type="text/css" href="{% static 'trending.css' %}">
+                    {% endblock htmlhead %}
+                    </head>
+                    <body>
+                        {% block content %}
+                        <br>
+                      <center><h3>POLITIK</h3></center> 
+                      <br>
+                    
+                        <!-- Slider -->
+                      <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img  src="https://awsimages.detik.net.id/visual/2023/08/25/4-raja-media-kakap-ri-tarung-politik-sosok-ini-terkaya_169.png?w=650" class="d-block w-50 mx-auto" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://batamtoday.com/media/news/dinasti_politik_b.jpg" class="d-block w-50 mx-auto"   alt="...">
+                            
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://c.ndtvimg.com/2023-11/4c52dnvg_delhi-pollution-pti_625x300_08_November_23.jpeg " class="d-block w-50 h-45 mx-auto " alt="...">
+                            
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                        
+                      <br>
+                      <br>
+                      <br>
+                      <!-- Card -->
+
+                      <div class="container text-center">
+                        <div class="row">
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://sangpencerah.id/wp-content/uploads/2023/05/images-3-13.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://pophariini.com/wp-content/uploads/2023/03/essayy-01.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      
+                                                    <!-- Site footer -->
+                                                
+                                                    <footer class="site-footer">
+                                                      <div class="container">
+                                                          <div class="row">
+                                                              <div class="col-sm-12 col-md-6">
+                                                                  <h6>About</h6>
+                                                                  <p class="text-justify">Scanfcode.com
+                                                                      <i>CODE WANTS TO BE SIMPLE
+                                                                      </i>
+                                                                      is an initiative to help the upcoming programmers with the code. Scanfcode
+                                                                      focuses on providing the most efficient code or snippets as the code wants to be
+                                                                      simple. We will help programmers build up concepts in different programming
+                                                                      languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP,
+                                                                      Android, SQL and Algorithm.</p>
+                                                              </div>
+
+                                                              <div class="col-xs-6 col-md-3">
+                                                                  <h6>Categories</h6>
+                                                                  <ul class="footer-links">
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/c-language/">C</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/front-end-development/">UI Design</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/back-end-development/">PHP</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/java-programming-language/">Java</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/android/">Android</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/category/templates/">Templates</a>
+                                                                      </li>
+                                                                  </ul>
+                                                              </div>
+
+                                                              <div class="col-xs-6 col-md-3">
+                                                                  <h6>Quick Links</h6>
+                                                                  <ul class="footer-links">
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/about/">About Us</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/contact/">Contact Us</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+                                                                      </li>
+                                                                      <li>
+                                                                          <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+                                                                      </li>
+                                                                  </ul>
+                                                              </div>
+                                                          </div>
+                                                          <hr></div>
+                                                          <div class="container">
+                                                              <div class="row">
+                                                                  <div class="col-md-8 col-sm-6 col-xs-12">
+                                                                      <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                                                                          <a href="#">Scanfcode</a>.
+                                                                      </p>
+                                                                  </div>
+
+                                                                  <div class="col-md-4 col-sm-6 col-xs-12">
+                                                                      <ul class="social-icons">
+                                                                          <li>
+                                                                              <a class="facebook" href="#">
+                                                                                  <i class="fa fa-facebook"></i>
+                                                                              </a>
+                                                                          </li>
+                                                                          <li>
+                                                                              <a class="twitter" href="#">
+                                                                                  <i class="fa fa-twitter"></i>
+                                                                              </a>
+                                                                          </li>
+                                                                          <li>
+                                                                              <a class="dribbble" href="#">
+                                                                                  <i class="fa fa-dribbble"></i>
+                                                                              </a>
+                                                                          </li>
+                                                                          <li>
+                                                                              <a class="linkedin" href="#">
+                                                                                  <i class="fa fa-linkedin"></i>
+                                                                              </a>
+                                                                          </li>
+                                                                      </ul>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      
+                                                      </footer>
+                                                      
+                      <!--Info -- -->
+
+
+
+
+
+
+
+                      <!-- Cuaca -->
+                      <script>
+                        !function (d, s, id) {
+                            var js,
+                                fjs = d.getElementsByTagName(s)[0];
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = 'https://weatherwidget.io/js/widget.min.js';
+                                fjs
+                                    .parentNode
+                                    .insertBefore(js, fjs);
+                            }
+                        }(document, 'script', 'weatherwidget-io-js');
+                    </script>
+                    {% endblock %}
+                        </body>

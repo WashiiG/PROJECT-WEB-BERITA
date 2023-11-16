@@ -10,7 +10,7 @@
                     </title>
                     {% block htmlhead %}
                     {% load static %}
-                    <link rel="stylesheet" type="text/css" href="{% static 'Healty.css' %}">
+                    <link rel="stylesheet" type="text/css" href="{% static 'trending.css' %}">
                     {% endblock htmlhead %}
                     </head>
                     <body>
@@ -93,8 +93,31 @@
                         </div>
                       </div>
 
+                      <div class="container text-center">
+                        <div class="row">
+                          <div class="col">
+                            <div class="container text-center">
+                              <h1 style="text-align: left; margin: bottom 30px;">{{beritas.judulLengkap}}</h1>
+                                <div class="row">
+                                    {% for berita in beritas %}
+                                  <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{berita.gambar.url}}" class="card-img-top" >
+                                        <div class="card-body"> {{berita.kategori}}
+                                          <h5 class="card-title">{{berita.judul}}</h5>
+                                          <p class="card-text">{{berita.deskripsi}}</p>
+                                          <a href="{% url 'News:isi' berita.id %}" class="btn btn-primary btn-danger">click here</a>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  {% endfor %}
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
                        <!-- Site footer -->
-                                                
+
                        <footer class="site-footer">
                         <div class="container">
                             <div class="row">

@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'news.Customuser'
+AUTH_USER_MODEL = 'News.Customuser'
 
 STATICFILES_DIRS = [
 

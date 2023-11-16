@@ -10,4 +10,6 @@ urlpatterns = [
     path('Entertainment/',views.Entertainment, name ='Entertainment'),
     path('Politik/',views.Politik, name ='Politik'),
     path('Healty/',views.Healty, name ='Healty'),
+    path('all/',views.all, name ='all'),
+    path('isi/<int:id>',views.isi, name ='isi'),
 ]
